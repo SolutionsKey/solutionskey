@@ -1,98 +1,126 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: Arial, sans-serif;
-  color: #222;
-  background: #fff;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #fff8e1, #fffde7);
+  color: #333;
 }
-
 header {
-  background: #000;
-  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #fbc02d, #f9a825);
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  animation: fadeInDown 1s ease forwards;
 }
-
+header h1 {
+  margin: 0;
+  font-size: 3em;
+}
+header p {
+  margin: 5px 0 0;
+  font-weight: 600;
+}
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin-top: 10px;
 }
-
-nav .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: yellow;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-}
-
-nav ul li {
-  margin-left: 1.5rem;
-}
-
-nav ul li a {
-  color: #fff;
+nav a {
+  color: white;
   text-decoration: none;
+  font-weight: 600;
+  margin: 0 15px;
+  transition: color 0.3s ease;
 }
-
-.hero {
-  background: yellow;
+nav a:hover {
+  color: #fff59d;
+}
+section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  animation: fadeInUp 1s ease forwards;
+}
+h2 {
   text-align: center;
-  padding: 4rem 2rem;
+  color: #fbc02d;
+  margin-bottom: 25px;
+  font-size: 2.5em;
 }
-
-.hero h1 {
-  font-size: 2.5rem;
-}
-
-.hero p {
-  margin-top: 1rem;
-  font-size: 1.2rem;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 1.5rem;
-  padding: 0.7rem 1.5rem;
-  background: #000;
-  color: yellow;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.about, .services, .contact {
-  padding: 3rem 2rem;
+p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 20px;
   text-align: center;
 }
-
-.services .service-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
-
 .service-card {
-  background: #f4f4f4;
-  padding: 1.5rem;
-  border-radius: 8px;
-}
-
-.contact a {
-  color: #000;
-  font-weight: bold;
-}
-
-footer {
-  background: #000;
-  color: #fff;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 25px;
+  width: 280px;
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
+  transition: transform 0.3s ease;
+}
+.service-card:hover {
+  transform: translateY(-8px);
+}
+.service-card h3 {
+  color: #f9a825;
+  margin-bottom: 15px;
+}
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.review-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+  animation: fadeInUp 1s ease forwards;
+}
+.review-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+.review-card p {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+.review-card strong {
+  color: #fbc02d;
+}
+footer {
+  background: #fbc02d;
+  text-align: center;
+  padding: 20px;
+  color: white;
+  margin-top: 40px;
+}
+footer a {
+  color: white;
+  text-decoration: underline;
+  margin: 0 8px;
+}
+footer a:hover {
+  color: #fff59d;
+}
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
